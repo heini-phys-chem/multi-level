@@ -1,26 +1,14 @@
 #!/usr/bin/env python3
 
-import sys, argparse
 import random
 import numpy as np
-import pandas as pd
 from copy import deepcopy
-from time import time
 
 import qml
 from qml.kernels import get_local_symmetric_kernel_mbdf, get_local_kernel_mbdf
-
-from qml.math import svd_solve, cho_solve
+from qml.math import svd_solve
 
 import MBDF
-
-from yaspin import yaspin
-from colored import fg
-
-
-RED = fg('red')
-WHITE = fg('white')
-GREEN = fg('green')
 
 
 def predictions(X, Q, Xt, Qt, Y, n, sigma):
