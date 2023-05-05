@@ -33,7 +33,7 @@ def grid_scan(X, Q, Y_CCSD, Y_HF, Y_HF_MP2, Y_MP2_CCSD, idx_train, test_idx):
     nModels = 5
 
     # test energies
-    Y_test = Y_CCSD[idx_test]
+    Y_test = Y_CCSD[test_idx]
 
     # training set seizes
     N = [175, 375, 750, 1500, 3000, 6000 ]
